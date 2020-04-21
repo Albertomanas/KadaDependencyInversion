@@ -1,7 +1,6 @@
 package org.formacion.di.negocio;
 
 import org.formacion.di.bbdd.Inventario;
-import org.formacion.di.bbdd.InventarioBBDD;
 
 public class ControladorEstoc implements necesitaResponder {
 
