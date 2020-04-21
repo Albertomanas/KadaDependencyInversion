@@ -1,12 +1,16 @@
 package org.formacion.di.negocio;
 
+import org.formacion.di.bbdd.Inventario;
 import org.formacion.di.bbdd.InventarioBBDD;
 
-public class ControladorEstoc {
+public class ControladorEstoc implements necesitaResponder {
 
-    private final InventarioBBDD inventario;
+    /**
+     * Cambiar la dependencia de InventarioBBDD y llamamos a la interfaz
+     */
+    private final Inventario inventario;
 
-    public ControladorEstoc(InventarioBBDD inventario) {
+    public ControladorEstoc(Inventario inventario) {
         this.inventario = inventario;
     }
 
@@ -17,6 +21,7 @@ public class ControladorEstoc {
      * p.e: necesitamos al menos 400 mesas (mesa : 4 letras) y
      *    al menos 700 lamparas (lampara: 7 letras)
      */
+    @Override
     public boolean necesitaReponer (String tienda, String producto) {
         int cantidadActual = inventario.numeroProductos(tienda, producto);
 
