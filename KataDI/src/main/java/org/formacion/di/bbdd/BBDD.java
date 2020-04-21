@@ -9,7 +9,7 @@ public class BBDD {
     public static Map<String, Map<String, Integer>> stocs = new HashMap<>();
 
     static {
-        Map<String, Integer> stocTiendaNorte = new HashMap<>();
+        final Map<String, Integer> stocTiendaNorte = new HashMap<>();
         stocTiendaNorte.put("lampara",600);
         stocTiendaNorte.put("mesa",500);
 
